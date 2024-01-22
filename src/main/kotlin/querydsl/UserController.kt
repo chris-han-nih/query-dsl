@@ -2,9 +2,9 @@ package querydsl
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
-import querydsl.repository.UserDto
+import querydsl.model.UserDto
 import querydsl.repository.UserJpaRepository
-import querydsl.repository.UserMapper
+import querydsl.model.UserMapper
 
 @RestController
 class UserController{

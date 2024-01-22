@@ -1,4 +1,4 @@
-package querydsl.repository
+package querydsl.model
 
 data class UserDto(
   val name: String,

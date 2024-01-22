@@ -5,7 +5,8 @@ import com.querydsl.jpa.impl.JPAQueryFactory
 import jakarta.persistence.EntityManager
 import jakarta.persistence.PersistenceContext
 import org.springframework.stereotype.Component
-import querydsl.entity.QUser
+import querydsl.model.QUserEntity
+import querydsl.model.UserDto
 
 @Component
 class UserSupportImpl (
@@ -14,7 +15,8 @@ class UserSupportImpl (
 ): UserSupport {
   override fun findByName(name: String): List<UserDto> {
     val queryFactory = JPAQueryFactory(entityManager)
-    val user = QUser.user
+    val user = QUserEntity.userEntity
+
     return queryFactory
       .select(
         Projections.constructor(

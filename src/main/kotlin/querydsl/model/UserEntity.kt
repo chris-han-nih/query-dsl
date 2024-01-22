@@ -1,10 +1,10 @@
-package querydsl.entity
+package querydsl.model
 
 import jakarta.persistence.*
 
 @Entity
-@Table
-class User(
+@Table(name = "user")
+class UserEntity(
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   val id: Long? = null,
