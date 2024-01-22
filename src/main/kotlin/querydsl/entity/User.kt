@@ -3,7 +3,7 @@ package querydsl.entity
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "user")
+@Table
 class User(
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
